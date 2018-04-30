@@ -8,7 +8,7 @@ When("I click on sign up button") do
 	sleep 3
 end
 
-Then("I should be able to see") do
+Then("I should be able to see signup page") do
 	@browser.find_element(xpath: '//div[2]/div/div/h4').displayed?
 end
 
@@ -34,11 +34,11 @@ When("I click on Ok button") do
 	@browser.find_element(id: 'signup_button').click
 	sleep 3
 	email=@browser.find_element(xpath: 'html/body/div[1]/div[2]/div/form/div[1]/div[2]/div[1]/span').text
-	print "{email}"
+	puts "#{email}"
 	pwd=@browser.find_element(xpath: '//div/form/div[1]/div[3]/div[1]/span').text
-	print "#{pwd}"
+	puts "#{pwd}"
 	cpwd=@browser.find_element(xpath: '//div[1]/div[4]/div[1]/span').text
-	print "#{cpwd}"
+	puts "#{cpwd}"
 
 end
 

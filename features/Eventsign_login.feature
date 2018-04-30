@@ -2,11 +2,11 @@
 Feature: As a End-User
 I should able to able to valid data sign in page
 
-@InvalidSignin
+@InvalidSignup
 Scenario:
 Given I am on Event Scheduler home page
 When I click on sign up button
-Then I should be able to see 
+Then I should be able to see signup page
 Given I am on Event Scheduler signup page
 When I enter InValid inputs
 And I click on Ok button
