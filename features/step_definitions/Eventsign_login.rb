@@ -15,13 +15,14 @@ end
 
 Given("I am on Event Scheduler signup page") do
 	sleep 3
-	@browser.find_element(xpath: '//div[2]/div/div/h4').displayed?
+	@browser.find_element(xpath: '//div[2]/div/div/h4')
 end
 
 When("I enter InValid inputs") do
 	sleep 3
 	name=@browser.find_element(id: 'signup_name')
 	name.send_keys "nikhil"
+	
 	sleep 3
 	@browser.find_element(id: 'user_email').send_keys "nill.com"
 	sleep 3
@@ -32,6 +33,10 @@ end
 When("I click on Ok button") do
 	sleep 3
 	@browser.find_element(id: 'signup_button').click
+	
+end
+
+Then("I should be able to see Error") do
 	sleep 3
 	email=@browser.find_element(xpath: 'html/body/div[1]/div[2]/div/form/div[1]/div[2]/div[1]/span').text
 	puts "#{email}"
@@ -40,9 +45,6 @@ When("I click on Ok button") do
 	cpwd=@browser.find_element(xpath: '//div[1]/div[4]/div[1]/span').text
 	puts "#{cpwd}"
 
-end
-
-Then("I should be able to see Error") do
 	@browser.find_element(xpath: '//div[2]/div/div/h4').displayed?
 end
 
@@ -60,7 +62,7 @@ end
 
 Given("I am on Event Scheduler login page") do
   sleep 2
-	@browser.find_element(xpath: '//div/div/div/h4').displayed?
+	@browser.find_element(xpath: '//div/div/div/h4')
 end
 
 When("I enter InValid email and password") do

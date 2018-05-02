@@ -3,7 +3,7 @@ Feature: As a End-User
 I should able to able to valid data sign in page
 
 @InvalidSignup
-Scenario:
+Scenario: New sign up with invalid details
 Given I am on Event Scheduler home page
 When I click on sign up button
 Then I should be able to see signup page
@@ -13,7 +13,7 @@ And I click on Ok button
 Then I should be able to see Error
 
 @Invalidlogin
-Scenario:
+Scenario: Login with invalid email and password
 Given I am on Event Scheduler home page
 When I click on login button
 Then I should be able to see login page pop up
